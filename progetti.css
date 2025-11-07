@@ -1,18 +1,26 @@
+:root {
+  --blu-principale: #007bff;
+  --blu-scuro: #0056b3;
+}
+
 /* Container principale */
 .projects-selection {
   display: flex;
-  justify-content: space-around; /* Spazio tra le immagini */
+  justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; /* Adatta su schermi piccoli */
+  flex-wrap: wrap;
   padding: 20px;
   gap: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
 }
 
 /* Ogni progetto */
 .project-item {
   position: relative;
-  flex: 1 1 45%; /* Occupa circa metà della larghezza, si adatta */
-  max-width: 500px; /* Limite massimo per non diventare enorme */
+  flex: 1 1 45%;
+  max-width: 500px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   border-radius: 10px;
   overflow: hidden;
@@ -25,15 +33,15 @@
 
 /* Immagine progetto */
 .project-item img {
-  width: 100%; /* Adatta alla larghezza del container */
-  height: auto; /* Mantiene proporzioni */
+  width: 100%;
+  height: auto;
   display: block;
 }
 
 /* Bottone sopra l'immagine */
 .project-item .project-btn {
   position: absolute;
-  top: 10px; /* Puoi regolare */
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--blu-principale);
@@ -45,6 +53,7 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 10;
 }
 
 .project-item .project-btn:hover {
@@ -55,6 +64,6 @@
 /* Responsive design */
 @media only screen and (max-width: 768px) {
   .project-item {
-    flex: 1 1 100%; /* Su schermi piccoli occupa tutta la larghezza */
+    flex: 1 1 100%;
   }
 }
