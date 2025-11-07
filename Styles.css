@@ -113,6 +113,33 @@ h3 {
   transform: translateY(-2px); /* Effetto hover più evidente */
 }
 
+/* Stili per la sezione chi sono */
+.biocard {
+    background-color: white;
+    border-left: 6px solid var(--blu-principale);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.biocard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.biocard h2 {
+    font-size: 1.8em;
+    color: var(--blu-scuro);
+    margin-bottom: 15px;
+}
+
+.biocard p {
+    line-height: 1.6;
+    color: #444;
+    font-size: 1.05em;
+}
+
 /* Stili per le sezioni */
 .bio, .skills, .experience, .projects, .contact-form-section {
   margin-bottom: 20px;
@@ -337,3 +364,4 @@ footer {
     display: block; /* Visualizza i progetti uno sotto l'altro */
   }
 }
+
