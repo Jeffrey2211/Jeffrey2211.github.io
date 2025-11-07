@@ -7,18 +7,20 @@
 .projects-selection {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  padding: 20px;
-  gap: 20px;
+  padding: 40px 20px;
+  gap: 40px;
   min-height: 100vh;
   box-sizing: border-box;
-  background-color: #f8f9fa;
+  background-color: #f0f0f0; /* sfondo chiaro neutro */
 }
 
 /* Ogni progetto */
 .project-item {
-  position: relative;
+  display: flex;
+  flex-direction: column; /* disposizione verticale immagine + bottone */
+  align-items: center;
   flex: 1 1 45%;
   max-width: 500px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -38,27 +40,23 @@
   display: block;
 }
 
-/* Bottone sopra l'immagine */
+/* Bottone sotto l'immagine */
 .project-item .project-btn {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 15px;
   background-color: var(--blu-principale);
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  z-index: 10;
 }
 
 .project-item .project-btn:hover {
   background-color: var(--blu-scuro);
-  transform: translateX(-50%) translateY(-2px);
+  transform: translateY(-2px);
 }
 
 /* Responsive design */
@@ -67,3 +65,4 @@
     flex: 1 1 100%;
   }
 }
+
