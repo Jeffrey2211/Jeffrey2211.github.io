@@ -23,7 +23,7 @@
   flex-direction: column;
   align-items: center;
   flex: 1 1 45%; /* due card affiancate, larghezza buona */
-  max-width: 500px;
+  max-width: 800px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
