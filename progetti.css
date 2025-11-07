@@ -4,6 +4,11 @@
   --sfondo: #f0f0f0;
 }
 
+body {
+  background-color: #007bff; /* uguale al footer */
+}
+
+
 /* Container principale */
 .projects-selection {
   display: flex;
