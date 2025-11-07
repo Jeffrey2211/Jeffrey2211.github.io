@@ -1,87 +1,60 @@
-/* ===== Stili generali ===== */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
+/* Container principale */
+.projects-selection {
+  display: flex;
+  justify-content: space-around; /* Spazio tra le immagini */
+  align-items: center;
+  flex-wrap: wrap; /* Adatta su schermi piccoli */
+  padding: 20px;
+  gap: 20px;
 }
 
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+/* Ogni progetto */
+.project-item {
+  position: relative;
+  flex: 1 1 45%; /* Occupa circa metà della larghezza, si adatta */
+  max-width: 500px; /* Limite massimo per non diventare enorme */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 30px;
+.project-item:hover {
+  transform: scale(1.03);
 }
 
-/* ===== Hub progetti ===== */
-.projects-hub {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    padding: 40px 20px;
+/* Immagine progetto */
+.project-item img {
+  width: 100%; /* Adatta alla larghezza del container */
+  height: auto; /* Mantiene proporzioni */
+  display: block;
 }
 
-.project-card {
-    position: relative;
-    width: 300px;
-    text-align: center;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-    background-color: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Bottone sopra l'immagine */
+.project-item .project-btn {
+  position: absolute;
+  top: 10px; /* Puoi regolare */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--blu-principale);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+.project-item .project-btn:hover {
+  background-color: var(--blu-scuro);
+  transform: translateX(-50%) translateY(-2px);
 }
 
-.project-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.project-card button {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.project-card button:hover {
-    background-color: #0056b3;
-    transform: translateX(-50%) translateY(-3px);
-}
-
-/* ===== Responsive ===== */
+/* Responsive design */
 @media only screen and (max-width: 768px) {
-    .projects-hub {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .project-card {
-        width: 80%;
-    }
+  .project-item {
+    flex: 1 1 100%; /* Su schermi piccoli occupa tutta la larghezza */
+  }
 }
