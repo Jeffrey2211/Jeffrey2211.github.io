@@ -113,7 +113,7 @@ h3 {
     transform: translateY(-2px); /* Effetto hover più evidente */
 }
 
-/* --- 🔹 Sezione "Chi sono" aggiornata (Opzione 1: elegante e professionale) --- */
+/* 🔹 Stili per la sezione "Chi sono" */
 .bio {
     position: relative;
     background: linear-gradient(to right, #ffffff, #f2f7ff);
@@ -122,6 +122,18 @@ h3 {
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 123, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 40px auto; /* separa visivamente la sezione dal resto */
+    max-width: 900px;  /* restringe la larghezza per dare focus */
+}
+
+.bio::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: transparent;
 }
 
 .bio:hover {
@@ -129,27 +141,7 @@ h3 {
     box-shadow: 0 6px 25px rgba(0, 123, 255, 0.2);
 }
 
-.bio h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: var(--blu-scuro);
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-.bio p {
-    line-height: 1.6;
-    font-size: 1.1rem;
-    color: #444;
-    text-align: justify;
-}
-
-.bio p::first-letter {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: var(--blu-principale);
-}
-
-/* Stili per le altre sezioni */
+/* Stili per competenze, esperienze, progetti, contatti */
 .skills, .experience, .projects, .contact-form-section {
     margin-bottom: 20px;
     background: white;
@@ -159,6 +151,7 @@ h3 {
     text-align: left;
 }
 
+/* Stili per il testo */
 .bio p, .skills ul, .experience ul {
     color: #333;
 }
@@ -261,7 +254,7 @@ footer {
     margin-top: 10px;
 }
 
-/* Stili per la sezione dell'educazione */
+/* Sezione Educazione */
 .education {
     background-color: white;
     padding: 20px;
