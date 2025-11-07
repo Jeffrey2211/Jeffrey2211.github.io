@@ -164,42 +164,34 @@ h3 {
 
 .bio-text {
   position: relative;
-  font-style: italic;
-  color: var(--bio-text-color); /* usa colore definito, fallback sicuro */
-  z-index: 1; /* assicura che il testo stia sopra le pseudo-virgolette */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e4e4e7;
+  font-family: "Poppins", sans-serif;
 }
 
-/* pseudo-virgolette decorative (unicode escapes per robustezza) */
+/* Virgolette decorative */
 .bio-text::before,
 .bio-text::after {
   position: absolute;
-  font-size: 3rem;
-  color: var(--blu-principale);
-  opacity: 0.14;
   font-family: "Georgia", serif;
-  text-shadow: 0 0 10px rgba(0, 123, 255, 0.45);
-  font-weight: 700;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  font-size: 3rem;
+  color: rgba(138, 180, 248, 0.35); /* azzurrino morbido */
   pointer-events: none;
-  z-index: 0; /* sotto il testo */
-  line-height: 1;
-  /* usa escape unicode per “ e ” */
-  will-change: transform, opacity;
 }
 
 .bio-text::before {
-  content: "\201C"; /* LEFT DOUBLE QUOTATION MARK = “ */
-  top: -22px;
-  left: -14px;
-  transform: translate3d(0,0,0);
+  content: "\201C"; /* “ */
+  top: -25px;
+  left: -18px;
 }
 
 .bio-text::after {
-  content: "\201D"; /* RIGHT DOUBLE QUOTATION MARK = ” */
-  bottom: -28px;
-  right: -10px;
-  transform: translate3d(0,0,0);
+  content: "\201D"; /* ” */
+  bottom: -35px;
+  right: -12px;
 }
+
 
 /* hover: illuminazione leggera dell'intero paragrafo */
 .bio-text:hover::before,
@@ -432,6 +424,7 @@ footer {
     display: block; /* Visualizza i progetti uno sotto l'altro */
   }
 }
+
 
 
 
