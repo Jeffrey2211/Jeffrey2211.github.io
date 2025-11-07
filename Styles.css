@@ -1,374 +1,124 @@
-/* Impostazioni globali */
 :root {
-    --blu-principale: #007bff;
-    --blu-scuro: #0056b3;
-    --blu-chiaro: #cce0ff;
+    --blu-principale: #004aad;
+    --blu-scuro: #002b6b;
+    --grigio-chiaro: #f8f9fc;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--grigio-chiaro);
+    color: #222;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #333; /* Colore del testo principale */
+    line-height: 1.6;
 }
 
-/* Stili per l'intestazione */
-header {
-    background-color: var(--blu-principale);
-    color: white;
-    padding: 20px 0;
-}
-
-.header-text {
-    color: white;
-}
-
-/* Stili per la sezione del profilo */
-.profile-container {
-    background-image: url('Sfondo_immagine_portfolio.jpeg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    width: 100%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.profile-picture {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid #ccc;
-}
-
-.profile-picture img {
-    width: 100%;
-    height: auto;
-}
-
-.profile-name {
-    margin-top: 20px;
-    text-align: center;
-    color: white;
-}
-
-/* Stili per il contenitore principale */
 .container {
-    padding: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 40px;
 }
 
-/* Stili per i titoli */
-h1, h2 {
-    color: var(--blu-scuro);
+/* --- TITOLI GENERALI --- */
+h1 {
     text-align: center;
+    color: var(--blu-principale);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-h3 {
-    color: var(--blu-scuro);
+h2 {
+    color: var(--blu-principale);
+    margin-top: 30px;
+    border-bottom: 2px solid var(--blu-principale);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-/* Stili per la barra di navigazione */
-.navbar {
-    background: var(--blu-principale); 
-    padding: 8px 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    border-radius: 0 0 10px 10px;
-}
-
-.navbar ul {
+ul {
     list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--blu-principale);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- SEZIONE CHI SONO --- */
+.about-section {
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
-    padding: 0;
-    margin: 0;
 }
 
-.navbar ul li {
-    margin: 0 15px;
-    background-color: rgba(54, 48, 48, 0.2);
-    border-radius: 15px;
-}
-
-.navbar ul li a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    font-size: 15px;
-    letter-spacing: 1px;
-    padding: 8px 12px;
-    border-radius: 5px;
-}
-
-.navbar ul li a:hover {
-    color: var(--blu-chiaro);
-    transform: translateY(-2px);
-}
-
-/* ------------------ BIO: card separata (solo il blocco .bio-card) ------------------ */
-
-/* mantiene .bio come wrapper della sezione, ma la card vera è .bio-card */
-.bio {
-    /* lasciamo .bio neutra così non interferisce con contatti/posizioni */
-    padding: 0;
-    margin: 0;
-}
-
-/* questa è la vera card che vuoi evidenziare */
 .bio-card {
-    position: relative;
-    background: linear-gradient(to right, #ffffff, #f2f7ff);
-    border-left: 5px solid var(--blu-principale);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.1);
+    background: linear-gradient(145deg, #ffffff, #f0f4ff);
+    border-left: 6px solid var(--blu-principale);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 900px;
+    text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 40px auto; /* separa visivamente la sezione dal resto */
-    max-width: 900px;  /* restringe la larghezza per dare focus */
-}
-
-.bio-card::before {
-    content: "";
-    position: absolute;
-    top: -15px;
-    left: 0;
-    right: 0;
-    height: 15px;
-    background: transparent;
 }
 
 .bio-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 25px rgba(0, 123, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .bio-card h2 {
     text-align: center;
-    font-size: 1.8rem;
     color: var(--blu-scuro);
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.highlight-letter {
+    color: var(--blu-principale);
+    font-weight: bold;
+    font-size: 2.3rem;
 }
 
 .bio-card p {
-    line-height: 1.6;
-    font-size: 1.1rem;
-    color: #444;
-    text-align: justify;
-}
-
-.bio-card p::first-letter {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: var(--blu-principale);
-}
-
-/* Stili per competenze, esperienze, progetti, contatti */
-.skills, .experience, .projects, .contact-form-section {
-    margin-bottom: 20px;
-    background: white;
-    padding: 12px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-/* Stili per il testo */
-.bio p, .skills ul, .experience ul {
     color: #333;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    margin: 0;
 }
 
-/* Stili per le liste */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background: #e4e4e4;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-ul li:hover {
-    transform: scale(1.05);
-}
-
-.contact-list {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-/* Stili per i pulsanti */
-.view-projects-btn, .project button, .credential-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: var(--blu-principale);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    text-decoration: none;
-    margin-left: 10px;
-}
-
-.view-projects-btn:hover, .project button:hover, .credential-button:hover {
-    background-color: var(--blu-scuro);
-    transform: translateY(-2px);
-}
-
-/* Stili per il piè di pagina */
-footer {
-    background-color: var(--blu-principale);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Stili specifici per i progetti */
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-.project {
-    background-color: var(--blu-chiaro);
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    flex: 1 1 calc(50% - 20px);
-    box-sizing: border-box;
-    height: auto;
-}
-
-.project img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.project h3 {
-    margin-top: 10px;
-}
-
-.project button {
-    margin-top: 10px;
-}
-
-/* Sezione Educazione */
-.education {
+/* --- SEZIONE CONTATTI E POSIZIONI --- */
+.bio {
     background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    padding: 30px 20px;
+    border-radius: 10px;
 }
 
-.education h2 {
-    color: var(--blu-scuro);
+.contact-list .icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
-.card {
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* --- ALTRE SEZIONI --- */
+.section {
+    margin-bottom: 40px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-body {
-    background-color: rgba(54, 48, 48, 0.2);
-    border-radius: 5px;
-    padding: 15px;
-}
-
-.card-body h5 {
-    color: var(--blu-scuro);
-}
-
-.card-body p {
-    color: #555;
-}
-
-.btn {
-    background-color: var(--blu-principale);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-decoration: none;
-    margin-left: 10px;
-}
-
-.btn:hover {
-    background-color: var(--blu-scuro);
-    color: white;
-}
-
-/* Responsive design */
-@media only screen and (max-width: 768px) {
-    nav {
-        display: none;
-    }
-
-    .profile-container {
-        height: auto;
-        padding: 20px 0;
-    }
-
-    .profile-picture {
-        width: 200px;
-        height: 200px;
-    }
-
-    .project {
-        width: 100%;
-        margin-bottom: 20px;
-        position: relative;
-        height: auto;
-    }
-
-    .project button, .credential-button {
-        position: static;
-        margin-top: 10px;
-        transform: none;
-    }
-
-    .projects-container {
-        display: block;
-    }
+.skills, .education {
+    margin-top: 20px;
 }
