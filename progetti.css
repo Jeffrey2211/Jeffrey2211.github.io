@@ -9,66 +9,67 @@
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 60px 20px; /* più padding per "respirare" */
+  padding: 60px 20px;
   gap: 40px;
-  min-height: 100vh; /* assicura altezza minima piena */
+  min-height: 100vh;
+  background-color: #f0f0f0;
   box-sizing: border-box;
-  background-color: #f0f0f0; /* sfondo chiaro neutro */
 }
 
-/* Ogni progetto */
+/* Ogni card */
 .project-item {
   display: flex;
-  flex-direction: column; /* disposizione verticale immagine + bottone */
+  flex-direction: column;
   align-items: center;
   flex: 1 1 45%;
   max-width: 500px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background-color: white;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
-  padding-bottom: 20px; /* più spazio interno sotto l'immagine per il bottone */
-  background-color: white; /* fa "staccare" il progetto dallo sfondo */
 }
 
 .project-item:hover {
   transform: scale(1.03);
 }
 
-/* Immagine progetto */
+/* Immagine del progetto */
 .project-item img {
   width: 100%;
-  height: 300px; /* altezza uniforme per tutte le immagini */
-  object-fit: cover; /* mantiene proporzioni senza deformare */
+  height: 300px;
+  object-fit: cover;
   display: block;
 }
 
 /* Bottone sotto l'immagine */
-.project-item .project-btn {
-  margin-top: 15px; /* distanza dall'immagine */
+.project-btn {
+  display: inline-block;
+  margin: 20px 0 25px 0; /* distanziato bene sotto l'immagine */
   background-color: var(--blu-principale);
   color: white;
   padding: 12px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
-  cursor: pointer;
   text-decoration: none;
+  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.project-item .project-btn:hover {
+.project-btn:hover {
   background-color: var(--blu-scuro);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
-/* Responsive design */
-@media only screen and (max-width: 768px) {
+/* Responsive */
+@media (max-width: 768px) {
   .project-item {
     flex: 1 1 100%;
     max-width: 100%;
   }
+
   .project-item img {
-    height: auto; /* si adatta al contenitore */
+    height: auto;
   }
 }
