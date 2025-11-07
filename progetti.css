@@ -23,8 +23,8 @@
   justify-content: flex-start;
   align-items: center;
   flex: 1 1 45%;
-  max-width: 600px;
-  height: 90vh; /* altezza della card adattata */
+  max-width: 1200px;
+  height: 85vh; /* altezza della card adattata */
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   border-radius: 10px;
   overflow: hidden;
