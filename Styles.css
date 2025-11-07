@@ -189,14 +189,14 @@ h3 {
 
 .bio-text::before {
   content: "\201C"; /* LEFT DOUBLE QUOTATION MARK = “ */
-  top: -12px;
+  top: -22px;
   left: -14px;
   transform: translate3d(0,0,0);
 }
 
 .bio-text::after {
   content: "\201D"; /* RIGHT DOUBLE QUOTATION MARK = ” */
-  bottom: -18px;
+  bottom: -28px;
   right: -10px;
   transform: translate3d(0,0,0);
 }
@@ -432,6 +432,7 @@ footer {
     display: block; /* Visualizza i progetti uno sotto l'altro */
   }
 }
+
 
 
 
