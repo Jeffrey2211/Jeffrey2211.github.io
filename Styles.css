@@ -140,6 +140,20 @@ h3 {
     font-size: 1.05em;
 }
 
+/* Evidenzia la prima lettera della sezione Chi sono */
+.highlight-letter {
+  color: var(--blu-principale);
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.highlight-letter:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+}
+
 /* Stili per le sezioni */
 .bio, .skills, .experience, .projects, .contact-form-section {
   margin-bottom: 20px;
@@ -364,4 +378,5 @@ footer {
     display: block; /* Visualizza i progetti uno sotto l'altro */
   }
 }
+
 
