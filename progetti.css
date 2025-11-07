@@ -1,73 +1,92 @@
 :root {
   --blu-principale: #007bff;
   --blu-scuro: #0056b3;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+  --sfondo: #f0f0f0;
 }
 
 /* Container principale */
 .projects-selection {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch; /* fa crescere le card alla stessa altezza */
-  width: 100%;
-  height: 100vh; /* riempie l'intera finestra */
+  justify-content: space-around;
+  align-items: stretch; /* forza stessa altezza delle card */
+  flex-wrap: wrap;
   padding: 20px;
-  box-sizing: border-box;
-  background-color: #f0f0f0;
   gap: 20px;
+  min-height: 80vh; /* quasi tutta la pagina */
+  background-color: var(--sfondo);
+  box-sizing: border-box;
 }
 
 /* Ogni progetto */
 .project-item {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* bottone sempre sotto */
-  flex: 1; /* due card uguale larghezza */
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 1 45%;
+  max-width: 600px;
+  height: 100%; /* stessa altezza */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
   background-color: white;
+}
+
+.project-item:hover {
+  transform: scale(1.03);
 }
 
 /* Immagine progetto */
 .project-item img {
   width: 100%;
-  height: calc(100% - 60px); /* lascia spazio per bottone */
-  object-fit: cover;
+  height: calc(100% - 70px); /* lascia spazio per il bottone */
+  object-fit: cover; /* riempi lo spazio senza deformare */
   display: block;
 }
 
 /* Bottone sotto l'immagine */
-.project-item .project-btn {
-  margin: 10px;
+.project-btn {
+  margin: 15px 0;
   background-color: var(--blu-principale);
   color: white;
-  padding: 12px 24px;
+  padding: 14px 28px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
+  font-size: 1.1rem;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.project-item .project-btn:hover {
+.project-btn:hover {
   background-color: var(--blu-scuro);
   transform: translateY(-2px);
+}
+
+/* Footer semplice */
+footer {
+  text-align: center;
+  padding: 12px 0;
+  background-color: #ddd;
+  color: #333;
+  font-size: 0.9rem;
+  margin-top: 20px;
 }
 
 /* Responsive design */
 @media only screen and (max-width: 768px) {
   .projects-selection {
     flex-direction: column;
+    align-items: center;
+    min-height: auto;
+  }
+
+  .project-item {
+    flex: 1 1 100%;
+    max-width: 90%;
     height: auto;
-    gap: 20px;
   }
 
   .project-item img {
