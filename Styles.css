@@ -1,55 +1,22 @@
-:root {
-    --blu-principale: #004aad;
-    --blu-scuro: #002b6b;
-    --grigio-chiaro: #f8f9fc;
-}
+/* -------------------------- */
+/* STILI GENERALI */
+/* -------------------------- */
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--grigio-chiaro);
-    color: #222;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    padding: 40px;
-}
-
-/* --- TITOLI GENERALI --- */
-h1 {
-    text-align: center;
-    color: var(--blu-principale);
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-h2 {
-    color: var(--blu-principale);
-    margin-top: 30px;
-    border-bottom: 2px solid var(--blu-principale);
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-li {
-    margin-bottom: 10px;
+h1, h2, h3, h4, h5 {
+    color: #0d6efd;
+    font-weight: 700;
 }
 
 a {
-    color: var(--blu-principale);
+    color: #0d6efd;
     text-decoration: none;
 }
 
@@ -57,68 +24,270 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- SEZIONE CHI SONO --- */
-.about-section {
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
+/* -------------------------- */
+/* NAVBAR */
+/* -------------------------- */
+
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffdd57;
+}
+
+/* -------------------------- */
+/* HEADER */
+/* -------------------------- */
+
+header {
+    text-align: center;
+    background: linear-gradient(135deg, #0d6efd, #007bff);
+    color: white;
+    padding: 60px 20px;
+}
+
+.header-text {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile-name h2 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #fff;
+}
+
+/* -------------------------- */
+/* SEZIONE PROGETTI */
+/* -------------------------- */
+
+.projects {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.projects h2 {
+    margin-bottom: 40px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.project {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project h3 {
+    margin: 15px 0;
+}
+
+.project button {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.project button:hover {
+    background-color: #084298;
+}
+
+/* -------------------------- */
+/* SEZIONE BIO / CONTATTI / POSIZIONI */
+/* -------------------------- */
+
+.bio {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+}
+
+.bio h2 {
+    margin-top: 40px;
+    color: #0d6efd;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* -------------------------- */
+/* SEZIONE EDUCAZIONE */
+/* -------------------------- */
+
+.education {
+    padding: 60px 20px;
+}
+
+.education .card {
+    margin-bottom: 25px;
+    border: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.education .card-body {
+    padding: 25px;
+}
+
+.credential-button {
+    background-color: #0d6efd;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.credential-button:hover {
+    background-color: #084298;
+}
+
+/* -------------------------- */
+/* SEZIONE COMPETENZE */
+/* -------------------------- */
+
+.skills {
+    background-color: #fff;
+    padding: 60px 20px;
+}
+
+.skills ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+.skills h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.skills h3 {
+    color: #333;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+/* -------------------------- */
+/* FOOTER */
+/* -------------------------- */
+
+footer {
+    background-color: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 0.95rem;
+}
+
+/* -------------------------- */
+/* SEZIONE “CHI SONO” (bio-card) */
+/* -------------------------- */
+
 .bio-card {
-    background: linear-gradient(145deg, #ffffff, #f0f4ff);
-    border-left: 6px solid var(--blu-principale);
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 900px;
-    text-align: left;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    margin: 50px auto;
+    max-width: 850px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bio-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
 
 .bio-card h2 {
-    text-align: center;
-    color: var(--blu-scuro);
-    margin-bottom: 15px;
     font-size: 2rem;
-}
-
-.highlight-letter {
-    color: var(--blu-principale);
-    font-weight: bold;
-    font-size: 2.3rem;
+    color: #0d6efd;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .bio-card p {
+    font-size: 1.1rem;
     color: #333;
-    line-height: 1.6;
-    font-size: 1.05rem;
-    margin: 0;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 0;
 }
 
-/* --- SEZIONE CONTATTI E POSIZIONI --- */
-.bio {
-    background-color: white;
-    padding: 30px 20px;
-    border-radius: 10px;
-}
+/* Responsive per la bio-card */
+@media (max-width: 768px) {
+    .bio-card {
+        padding: 25px;
+        margin: 30px 15px;
+    }
 
-.contact-list .icon {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
+    .bio-card h2 {
+        font-size: 1.6rem;
+    }
 
-/* --- ALTRE SEZIONI --- */
-.section {
-    margin-bottom: 40px;
-}
-
-.skills, .education {
-    margin-top: 20px;
+    .bio-card p {
+        font-size: 1rem;
+    }
 }
