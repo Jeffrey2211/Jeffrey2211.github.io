@@ -44,6 +44,14 @@
   border-bottom: 1px solid #ccc; /* separa visivamente il bottone dall’immagine */
 }
 
+footer {
+    background-color: var(--blu-principale); /* = #007bff */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+
 /* Bottone sotto l'immagine */
 .project-item .project-btn {
   margin: 15px 0;       /* distanza dall’immagine */
