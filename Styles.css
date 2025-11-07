@@ -113,8 +113,44 @@ h3 {
     transform: translateY(-2px); /* Effetto hover più evidente */
 }
 
-/* Stili per le sezioni */
-.bio, .skills, .experience, .projects, .contact-form-section {
+/* --- 🔹 Sezione "Chi sono" aggiornata (Opzione 1: elegante e professionale) --- */
+.bio {
+    position: relative;
+    background: linear-gradient(to right, #ffffff, #f2f7ff);
+    border-left: 5px solid var(--blu-principale);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 123, 255, 0.2);
+}
+
+.bio h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blu-scuro);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.bio p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #444;
+    text-align: justify;
+}
+
+.bio p::first-letter {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--blu-principale);
+}
+
+/* Stili per le altre sezioni */
+.skills, .experience, .projects, .contact-form-section {
     margin-bottom: 20px;
     background: white;
     padding: 12px;
@@ -123,7 +159,6 @@ h3 {
     text-align: left;
 }
 
-/* Stili per il testo */
 .bio p, .skills ul, .experience ul {
     color: #333;
 }
@@ -175,8 +210,8 @@ ul li:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    text-decoration: none; /* Assicura che il link non abbia sottolineatura */
-    margin-left: 10px; /* Spazio a sinistra del pulsante */
+    text-decoration: none;
+    margin-left: 10px;
 }
 
 .view-projects-btn:hover, .project button:hover, .credential-button:hover {
@@ -283,8 +318,8 @@ footer {
 
 /* Responsive design */
 @media only screen and (max-width: 768px) {
-    .navbar {
-        display: none; /* Nasconde la barra di navigazione */
+    nav {
+        display: none;
     }
 
     .profile-container {
@@ -311,6 +346,6 @@ footer {
     }
 
     .projects-container {
-        display: block; /* Visualizza i progetti uno sotto l'altro */
+        display: block;
     }
 }
