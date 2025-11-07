@@ -1,36 +1,35 @@
 :root {
   --blu-principale: #007bff;
   --blu-scuro: #0056b3;
-  --sfondo: #f0f0f0;
 }
 
 /* Container principale */
 .projects-selection {
   display: flex;
   justify-content: space-around;
-  align-items: stretch; /* forza stessa altezza delle card */
+  align-items: stretch; /* fa sì che le card abbiano la stessa altezza */
   flex-wrap: wrap;
-  padding: 20px;
-  gap: 20px;
-  min-height: 80vh; /* quasi tutta la pagina */
-  background-color: var(--sfondo);
+  padding: 40px 20px;
+  gap: 40px;
+  min-height: 100vh;
   box-sizing: border-box;
+  background-color: #f0f0f0; /* sfondo chiaro neutro */
 }
 
 /* Ogni progetto */
 .project-item {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column; /* immagine sopra, bottone sotto */
+  justify-content: flex-start;
   align-items: center;
-  justify-content: space-between;
   flex: 1 1 45%;
   max-width: 600px;
-  height: 100%; /* stessa altezza */
+  height: 80vh; /* altezza della card adattata */
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease;
   background-color: white;
+  transition: transform 0.3s ease;
 }
 
 .project-item:hover {
@@ -40,56 +39,36 @@
 /* Immagine progetto */
 .project-item img {
   width: 100%;
-  height: calc(100% - 70px); /* lascia spazio per il bottone */
-  object-fit: cover; /* riempi lo spazio senza deformare */
-  display: block;
+  flex-grow: 1;        /* riempie tutto lo spazio disponibile */
+  object-fit: cover;   /* mantiene proporzioni senza distorsioni */
+  border-bottom: 1px solid #ccc; /* separa visivamente il bottone dall’immagine */
 }
 
 /* Bottone sotto l'immagine */
-.project-btn {
-  margin: 15px 0;
+.project-item .project-btn {
+  margin: 15px 0;       /* distanza dall’immagine */
+  padding: 12px 28px;   /* bottone proporzionato */
+  font-size: 1rem;
   background-color: var(--blu-principale);
   color: white;
-  padding: 14px 28px;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   font-weight: bold;
-  font-size: 1.1rem;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none; /* importante per i link! */
+  display: inline-block; /* obbligatorio per trasformare il link in bottone */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.project-btn:hover {
+.project-item .project-btn:hover {
   background-color: var(--blu-scuro);
   transform: translateY(-2px);
 }
 
-/* Footer semplice */
-footer {
-  text-align: center;
-  padding: 12px 0;
-  background-color: #ddd;
-  color: #333;
-  font-size: 0.9rem;
-  margin-top: 20px;
-}
-
 /* Responsive design */
 @media only screen and (max-width: 768px) {
-  .projects-selection {
-    flex-direction: column;
-    align-items: center;
-    min-height: auto;
-  }
-
   .project-item {
     flex: 1 1 100%;
-    max-width: 90%;
-    height: auto;
-  }
-
-  .project-item img {
-    height: auto;
+    height: auto; /* altezza automatica su mobile */
   }
 }
