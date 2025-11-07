@@ -68,7 +68,7 @@ h1, h2 {
     text-align: center;
 }
 
-h3{
+h3 {
     color: var(--blu-scuro);
 }
 
@@ -228,80 +228,62 @@ footer {
 
 /* Stili per la sezione dell'educazione */
 .education {
-    background-color: white; /* Colore di sfondo grigio chiaro */
-    padding: 20px; /* Spaziatura interna */
-    margin-bottom: 20px; /* Margine inferiore per separazione visiva */
-    border-radius: 5px; /* Bordi arrotondati */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
-    text-align: left; /* Allinea il testo a sinistra */
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .education h2 {
-    color: var(--blu-scuro); /* Colore del titolo coerente */
+    color: var(--blu-scuro);
 }
 
 .card {
-    margin-bottom: 20px; /* Spazio inferiore tra le card di educazione */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animazione per il passaggio del mouse */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Effetto di alzata */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombra più evidente */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-body {
-    background-color: rgba(54, 48, 48, 0.2); /* Sfondo bianco */
-    border-radius: 5px; /* Bordi arrotondati */
-    padding: 15px; /* Spaziatura interna */
+    background-color: rgba(54, 48, 48, 0.2);
+    border-radius: 5px;
+    padding: 15px;
 }
 
 .card-body h5 {
-    color: var(--blu-scuro); /* Colore del titolo coerente */
+    color: var(--blu-scuro);
 }
 
 .card-body p {
-    color: #555; /* Colore del testo più scuro */
+    color: #555;
 }
 
 .btn {
-    background-color: var(--blu-principale); /* Colore di sfondo del pulsante */
-    color: white; /* Colore del testo del pulsante */
-    border: none; /* Nessun bordo */
-    border-radius: 5px; /* Bordi arrotondati */
-    padding: 8px 16px; /* Spaziatura interna */
-    cursor: pointer; /* Cambio del cursore */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transizione del colore di sfondo e del testo */
-    text-decoration: none; /* Nessuna sottolineatura */
-    margin-left: 10px; /* Margine sinistro del pulsante */
+    background-color: var(--blu-principale);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    margin-left: 10px;
 }
 
 .btn:hover {
-    background-color: var(--blu-scuro); /* Cambia colore di sfondo al passaggio del mouse */
-    color: white; /* Cambia colore del testo al passaggio del mouse */
-}
-
-.credential-button {
-    display: inline-block; /* Visualizza come blocco */
-    padding: 8px 16px; /* Spaziatura interna */
-    background-color: var(--blu-principale); /* Colore di sfondo del pulsante */
-    color: white; /* Colore del testo del pulsante */
-    border: none; /* Nessun bordo */
-    border-radius: 5px; /* Bordi arrotondati */
-    cursor: pointer; /* Cambio del cursore */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transizione del colore di sfondo e del testo */
-    text-decoration: none; /* Nessuna sottolineatura */
-    margin-left: 10px; /* Margine sinistro del pulsante */
-}
-
-.credential-button:hover {
-    background-color: var(--blu-scuro); /* Cambia colore di sfondo al passaggio del mouse */
-    color: white; /* Cambia colore del testo al passaggio del mouse */
+    background-color: var(--blu-scuro);
+    color: white;
 }
 
 /* Responsive design */
 @media only screen and (max-width: 768px) {
-    nav {
+    .navbar {
         display: none; /* Nasconde la barra di navigazione */
     }
 
