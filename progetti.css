@@ -29,7 +29,7 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   overflow: hidden;
   transition: transform 0.3s ease;
-  height: calc(100vh - 60px); /* occupa tutta l’altezza visibile meno header */
+  height: calc(80vh - 60px); /* occupa tutta l’altezza visibile meno header */
 }
 
 .project-item:hover {
