@@ -156,6 +156,35 @@ h3 {
   text-shadow: 0 0 20px rgba(0, 123, 255, 0.9);
 }
 
+.bio-text {
+  position: relative;
+  font-style: italic;
+  color: var(--colore-testo);
+}
+
+.bio-text::before,
+.bio-text::after {
+  position: absolute;
+  font-size: 3rem;
+  color: var(--blu-principale);
+  opacity: 0.15;
+  font-family: "Georgia", serif;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.bio-text::before {
+  content: "“";
+  top: -10px;
+  left: -20px;
+}
+
+.bio-text::after {
+  content: "”";
+  bottom: -20px;
+  right: -15px;
+}
 
 /* Stili per le sezioni */
 .bio, .skills, .experience, .projects, .contact-form-section {
@@ -381,6 +410,7 @@ footer {
     display: block; /* Visualizza i progetti uno sotto l'altro */
   }
 }
+
 
 
 
