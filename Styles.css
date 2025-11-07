@@ -34,8 +34,8 @@ header {
     height: 400px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra verticalmente gli elementi all'interno */
-    justify-content: flex-end; /* Spinge gli elementi verso il basso */
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .profile-picture {
@@ -52,9 +52,9 @@ header {
 }
 
 .profile-name {
-    margin-top: 20px; /* Aumenta lo spazio tra l'immagine e la scritta */
-    text-align: center; /* Centra il testo orizzontalmente */
-    color: white; /* Aggiunge il colore del testo */
+    margin-top: 20px;
+    text-align: center;
+    color: white;
 }
 
 /* Stili per il contenitore principale */
@@ -80,7 +80,7 @@ h3 {
     top: 0;
     width: 100%;
     z-index: 1000;
-    border-radius: 0 0 10px 10px; /* Bordi arrotondati solo in basso */
+    border-radius: 0 0 10px 10px;
 }
 
 .navbar ul {
@@ -93,8 +93,8 @@ h3 {
 
 .navbar ul li {
     margin: 0 15px;
-    background-color: rgba(54, 48, 48, 0.2); /* Sfondo grigio */
-    border-radius: 15px; /* Bordi arrotondati */
+    background-color: rgba(54, 48, 48, 0.2);
+    border-radius: 15px;
 }
 
 .navbar ul li a {
@@ -102,19 +102,28 @@ h3 {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-    font-size: 15px; /* Testo più grande */
-    letter-spacing: 1px; /* Spaziatura leggermente aumentata */
-    padding: 8px 12px; /* Spaziatura interna */
-    border-radius: 5px; /* Assicura che il link sia coperto dallo sfondo */
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
 .navbar ul li a:hover {
     color: var(--blu-chiaro);
-    transform: translateY(-2px); /* Effetto hover più evidente */
+    transform: translateY(-2px);
 }
 
-/* 🔹 Stili per la sezione "Chi sono" */
+/* ------------------ BIO: card separata (solo il blocco .bio-card) ------------------ */
+
+/* mantiene .bio come wrapper della sezione, ma la card vera è .bio-card */
 .bio {
+    /* lasciamo .bio neutra così non interferisce con contatti/posizioni */
+    padding: 0;
+    margin: 0;
+}
+
+/* questa è la vera card che vuoi evidenziare */
+.bio-card {
     position: relative;
     background: linear-gradient(to right, #ffffff, #f2f7ff);
     border-left: 5px solid var(--blu-principale);
@@ -126,7 +135,7 @@ h3 {
     max-width: 900px;  /* restringe la larghezza per dare focus */
 }
 
-.bio::before {
+.bio-card::before {
     content: "";
     position: absolute;
     top: -15px;
@@ -136,9 +145,30 @@ h3 {
     background: transparent;
 }
 
-.bio:hover {
+.bio-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 25px rgba(0, 123, 255, 0.2);
+}
+
+.bio-card h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blu-scuro);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 12px;
+}
+
+.bio-card p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #444;
+    text-align: justify;
+}
+
+.bio-card p::first-letter {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--blu-principale);
 }
 
 /* Stili per competenze, esperienze, progetti, contatti */
