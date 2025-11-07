@@ -32,7 +32,7 @@ h1, h2, h3 {
     color: var(--blu-scuro);
 }
 
-.bio, .skills, .experience, .education, .projects, .contact-form-section {
+.bio, .skills, .education, .projects, .contact-form-section {
     margin-bottom: 20px;
     background: white;
     padding: 20px;
@@ -41,7 +41,7 @@ h1, h2, h3 {
     text-align: left;
 }
 
-.bio p, .skills ul, .experience ul, .education ul, .projects .project p {
+.bio p, .skills ul, .education ul, .projects .project p {
     color: #333;
 }
 
@@ -148,11 +148,11 @@ footer {
     bottom: 0;
 }
 
-.skills ul, .experience ul, .education ul {
+.skills ul, .education ul {
     margin-top: 10px;
 }
 
-.skills ul li, .experience ul li, .education ul li {
+.skills ul li, .education ul li {
     background-color: var(--blu-chiaro);
     padding: 10px;
     border-radius: 5px;
@@ -188,56 +188,5 @@ footer {
 
     .icon {
         margin-bottom: 5px;
-    }
-}
-
-/* -------------------------- */
-/* SEZIONE “CHI SONO” (bio-card) */
-/* -------------------------- */
-
-.bio-card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 30px 40px;
-    margin: 50px auto;
-    max-width: 850px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.bio-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
-}
-
-.bio-card h2 {
-    font-size: 2rem;
-    color: #0d6efd;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.bio-card p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.8;
-    text-align: justify;
-    margin-bottom: 0;
-}
-
-/* Optional: responsive */
-@media (max-width: 768px) {
-    .bio-card {
-        padding: 25px;
-        margin: 30px 15px;
-    }
-
-    .bio-card h2 {
-        font-size: 1.6rem;
-    }
-
-    .bio-card p {
-        font-size: 1rem;
     }
 }
