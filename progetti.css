@@ -12,7 +12,6 @@
   flex-wrap: wrap;
   padding: 20px;
   gap: 40px;
-  min-height: 100vh; /* riempie tutta la viewport */
   background-color: var(--sfondo);
   box-sizing: border-box;
 }
@@ -29,7 +28,6 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   overflow: hidden;
   transition: transform 0.3s ease;
-  height: calc(80vh - 60px); /* occupa tutta l’altezza visibile meno header */
 }
 
 .project-item:hover {
@@ -39,7 +37,7 @@
 /* Immagini */
 .project-item img {
   width: 100%;
-  height: calc(100% - 60px); /* lascia spazio al bottone */
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -47,7 +45,7 @@
 /* Bottone sotto l'immagine */
 .project-item .project-btn,
 .project-item .project-bt {
-  margin-top: 10px;
+  margin-top: 15px;
   background-color: var(--blu-principale);
   color: white;
   padding: 12px 24px;
