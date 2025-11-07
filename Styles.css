@@ -1,206 +1,339 @@
+/* Impostazioni globali */
 :root {
-    --blu-principale: #007bff; /* Blu principale */
-    --blu-scuro: #0056b3; /* Blu scuro per evidenziare parti importanti */
-    --blu-chiaro: #cce0ff; /* Blu chiaro per sfondo */
+  --blu-principale: #007bff;
+  --blu-scuro: #0056b3;
+  --blu-chiaro: #cce0ff;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    text-align: center; /* Centratura del testo */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333; /* Colore del testo principale */
 }
 
+/* Stili per l'intestazione */
 header {
-    background-color: var(--blu-principale);
-    color: white;
-    padding: 20px 0;
+  background-color: var(--blu-principale);
+  color: white;
+  padding: 20px 0;
 }
 
+.header-text {
+  color: white;
+}
+
+/* Stili per la sezione del profilo */
+.profile-container {
+  background-image: url('Sfondo_immagine_portfolio.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra verticalmente gli elementi all'interno */
+  justify-content: flex-end; /* Spinge gli elementi verso il basso */
+}
+
+.profile-picture {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #ccc;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: auto;
+}
+
+.profile-name {
+  margin-top: 20px; /* Aumenta lo spazio tra l'immagine e la scritta */
+  text-align: center; /* Centra il testo orizzontalmente */
+  color: white; /* Aggiunge il colore del testo */
+}
+
+/* Stili per il contenitore principale */
 .container {
-    width: 80%;
-    margin: 20px auto; /* Centratura del contenuto */
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+  padding: 20px;
 }
 
-h1, h2, h3 {
-    color: var(--blu-scuro);
+/* Stili per i titoli */
+h1, h2 {
+  color: var(--blu-scuro);
+  text-align: center;
 }
 
-.bio,
-.skills,
-.experience,
-.education,
-.projects,
-.contact-form-section {
-    margin-bottom: 20px;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
+h3 {
+  color: var(--blu-scuro);
 }
 
-.bio p,
-.skills ul,
-.experience ul,
-.education ul,
-.projects .project p {
-    color: #333;
+/* Stili per la barra di navigazione */
+.navbar {
+  background: var(--blu-principale);
+  padding: 8px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-radius: 0 0 10px 10px; /* Bordi arrotondati solo in basso */
 }
 
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+  background-color: rgba(54, 48, 48, 0.2); /* Sfondo grigio */
+  border-radius: 15px; /* Bordi arrotondati */
+}
+
+.navbar ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 15px; /* Testo più grande */
+  letter-spacing: 1px; /* Spaziatura leggermente aumentata */
+  padding: 8px 12px; /* Spaziatura interna */
+  border-radius: 5px; /* Assicura che il link sia coperto dallo sfondo */
+}
+
+.navbar ul li a:hover {
+  color: var(--blu-chiaro);
+  transform: translateY(-2px); /* Effetto hover più evidente */
+}
+
+/* Stili per le sezioni */
+.bio, .skills, .experience, .projects, .contact-form-section {
+  margin-bottom: 20px;
+  background: white;
+  padding: 12px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Stili per il testo */
+.bio p, .skills ul, .experience ul {
+  color: #333;
+}
+
+/* Stili per le liste */
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 ul li {
-    background: #e4e4e4;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+  background: #e4e4e4;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 ul li:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .contact-list {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .contact-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
-#contact-button {
-    background-color: var(--blu-principale);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Stili per i pulsanti */
+.view-projects-btn,
+.project button,
+.credential-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--blu-principale);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none; /* Assicura che il link non abbia sottolineatura */
+  margin-left: 10px; /* Spazio a sinistra del pulsante */
 }
 
-#contact-button:hover {
-    background-color: var(--blu-scuro);
+.view-projects-btn:hover,
+.project button:hover,
+.credential-button:hover {
+  background-color: var(--blu-scuro);
+  transform: translateY(-2px);
 }
 
-#contact-form {
-    display: none; /* Initially hidden */
-    flex-direction: column;
-}
-
-#contact-form label {
-    margin-top: 10px;
-}
-
-#contact-form input,
-#contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact-form button {
-    background-color: var(--blu-principale);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-#contact-form button:hover {
-    background-color: var(--blu-scuro);
-}
-
-.view-projects-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: var(--blu-principale);
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.view-projects-btn:hover {
-    background-color: var(--blu-scuro);
-}
-
+/* Stili per il piè di pagina */
 footer {
-    background-color: var(--blu-principale);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+  background-color: var(--blu-principale);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  bottom: 0;
 }
 
-.skills ul,
-.experience ul,
-.education ul {
-    margin-top: 10px;
-}
-
-.skills ul li,
-.experience ul li,
-.education ul li {
-    background-color: var(--blu-chiaro);
-    padding: 10px;
-    border-radius: 5px;
+/* Stili specifici per i progetti */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .project {
-    background-color: var(--blu-chiaro);
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  background-color: var(--blu-chiaro);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+  height: auto;
 }
 
-.contact-form-section {
-    margin-bottom: 150px; /* Assicura che il footer non copra il modulo di contatto */
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-.projects:hover {
-    transform: translateY(-3px); /* Sposta leggermente verso l'alto al passaggio del mouse */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Ombra più pronunciata */
+.project h3 {
+  margin-top: 10px;
+}
+
+.project button {
+  margin-top: 10px;
+}
+
+/* Stili per la sezione dell'educazione */
+.education {
+  background-color: white; /* Colore di sfondo grigio chiaro */
+  padding: 20px; /* Spaziatura interna */
+  margin-bottom: 20px; /* Margine inferiore per separazione visiva */
+  border-radius: 5px; /* Bordi arrotondati */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+  text-align: left; /* Allinea il testo a sinistra */
+}
+
+.education h2 {
+  color: var(--blu-scuro); /* Colore del titolo coerente */
+}
+
+.card {
+  margin-bottom: 20px; /* Spazio inferiore tra le card di educazione */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animazione per il passaggio del mouse */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Effetto di alzata */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombra più evidente */
+}
+
+.card-body {
+  background-color: rgba(54, 48, 48, 0.2); /* Sfondo bianco */
+  border-radius: 5px; /* Bordi arrotondati */
+  padding: 15px; /* Spaziatura interna */
+}
+
+.card-body h5 {
+  color: var(--blu-scuro); /* Colore del titolo coerente */
+}
+
+.card-body p {
+  color: #555; /* Colore del testo più scuro */
+}
+
+.btn {
+  background-color: var(--blu-principale);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.btn:hover {
+  background-color: var(--blu-scuro);
+  color: white;
+}
+
+.credential-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--blu-principale);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.credential-button:hover {
+  background-color: var(--blu-scuro);
+  color: white;
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
+@media only screen and (max-width: 768px) {
+  nav {
+    display: none; /* Nasconde la barra di navigazione */
+  }
 
-    .contact-list li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .profile-container {
+    height: auto;
+    padding: 20px 0;
+  }
 
-    .icon {
-        margin-bottom: 5px;
-    }
+  .profile-picture {
+    width: 200px;
+    height: 200px;
+  }
+
+  .project {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    height: auto;
+  }
+
+  .project button,
+  .credential-button {
+    position: static;
+    margin-top: 10px;
+    transform: none;
+  }
+
+  .projects-container {
+    display: block; /* Visualizza i progetti uno sotto l'altro */
+  }
 }
