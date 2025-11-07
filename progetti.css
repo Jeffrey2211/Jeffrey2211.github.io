@@ -5,6 +5,7 @@
 }
 
 body {
+  margin: 0; /* elimina margini predefiniti del browser */
   background-color: #007bff; /* uguale al footer */
 }
 
